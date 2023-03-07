@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -ex
+
 DEFAULT=$PWD/default
 OPTIONAL=$PWD/optional
 
@@ -170,7 +172,7 @@ function i3_setup {
 
     pkg_install "net-tools"
 
-    cp $DEFULAT/i3/config $HOME/.config/i3/config
+    cp $DEFAULT/i3/config $HOME/.config/i3/config
     cp $DEFAULT/i3/slow_mouse.sh $HOME/.config/i3/slow_mouse.sh
     cp $DEFAULT/i3/polybar/config $HOME/.config/i3/polybar/config
     cp $DEFAULT/i3/polybar/launch.sh $HOME/.config/i3/polybar/launch.sh
