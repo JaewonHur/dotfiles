@@ -245,7 +245,7 @@ function pyenv_setup {
     git clone git://github.com/pyenv/pyenv-update.git ~/.pyenv/plugins/pyenv-update
 
     PYENV_ROOT=$HOME/.pyenv
-    echo 'PYENV_ROOT="$HOME/.pyenv"' >> $HOME/.envvars
+    echo 'export PYENV_ROOT="$HOME/.pyenv"' >> $HOME/.envvars
     # echo 'export PYENV_ROOT="$HOME/.pyenv"' >> $HOME/.zshrc
     PATH=$PYENV_ROOT/bin:$PATH
     # echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> $HOME/.zshrc
@@ -308,7 +308,7 @@ then
     default_setup
     optional_setup
 
-    echo "PATH=$PATH" >> $HOME/.envvars
+    echo "export PATH=$PATH" >> $HOME/.envvars
     zsh
 elif [[ ${1} == "help" ]]
 then
