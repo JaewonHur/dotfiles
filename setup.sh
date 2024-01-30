@@ -81,6 +81,9 @@ function zsh_setup {
     cp $DEFAULT/zsh/zshrc $HOME/.zshrc
     cp $DEFAULT/zsh/p10k.zsh $HOME/.p10k.zsh
 
+    git clone --depth=1 -b 0.35.1 https://github.com/junegunn/fzf.git $HOME/.fzf
+    $HOME/.fzf/install --key-bindings --completion
+
     # Need to make not get password
     echo "sudo chsh -s $(which zsh) $USER"
     sudo chsh -s $(which zsh) $USER
