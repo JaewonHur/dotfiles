@@ -245,7 +245,7 @@ function pyenv_setup {
                 xz-utils tk-dev libffi-dev liblzma-dev python-openssl git libedit-dev python"
 
     git clone https://github.com/pyenv/pyenv.git $HOME/.pyenv
-    git clone git://github.com/pyenv/pyenv-update.git ~/.pyenv/plugins/pyenv-update
+    git clone https://github.com/pyenv/pyenv-update.git $HOME/.pyenv/plugins/pyenv-update
 
     PYENV_ROOT=$HOME/.pyenv
     echo 'export PYENV_ROOT="$HOME/.pyenv"' >> $HOME/.envvars
